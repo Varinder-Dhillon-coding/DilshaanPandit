@@ -1,0 +1,168 @@
+@font-face {
+    font-family: Inter-Extrabold;
+    src: url(../Inter/static/Inter-ExtraBold.ttf);
+}
+@font-face {
+    font-family: Inter-Bold;
+    src: url(../Inter/static/Inter-Bold.ttf);
+}
+@font-face {
+    font-family: Inter-Medium;
+    src: url(Inter/Inter-Medium.ttf);
+}
+body{
+    background-color: rgb(11, 10, 10);
+}
+.row1{
+    display: flex;
+    height: 100px;
+    align-items: center;
+    color: white;
+    background-color: black;
+    font-family: Inter-ExtraBold;
+    padding: 34px;
+    font-size: 17px;
+}
+.logo{
+    width: 40%;
+}
+.menu{
+    width: 20%;
+}
+.menu a,.logo a{
+    color: #fff;
+    text-decoration: none;
+    transition: 0.5s;
+}
+.menu a::after{
+    content: '';
+    display: flex;
+    width: 0;
+    height: 3px;
+    background: #fe3756;
+    transition: width .5s;
+}
+.menu a:hover::after{
+    width: 25%;
+}
+.menu a:hover,.logo a:hover{
+    color: #fe3756;
+}
+.main_headline{
+    position: absolute;
+    margin-top: 19%;
+    width: 102%;
+}
+.main_headline p{
+    text-align: center;
+    font-size: 19px;
+    color: white;
+    font-family: Inter-Bold;
+}
+.main_headline button{
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 15px;
+    font-family: Inter-bold;
+    transition: .5s;
+}
+.main_headline button i{
+    color: #0292D8;
+}
+.main_headline button:hover{
+    background-color: #fff;
+    color: black;
+    transition: .7s;
+}
+.row2{
+    height: 700px;
+    padding: 28px;
+}
+.recommendation{
+    margin-top: 100px;
+}
+.recommendation p{
+    color: #fff;
+    text-align: center;
+    font-size: 21px;
+    margin: -12px;
+    margin-top: revert;
+    font-family: Inter-Bold;
+}
+.background img{
+    width: 100%;
+    height: auto;
+}
+.row2{
+    margin-top: 50px;
+}
+.footer{
+    height: 100px;
+}
+.footer ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-top: 98px;
+    padding: 16px;
+    margin-right: -40px;
+    margin-left: -40px;
+}
+.footer ul li a,.content div a{
+    margin: 13px;
+    color: #fff;
+    transition: .3s;
+}
+.footer ul li a:hover,.content div a:hover,.row3 div a:hover{
+    color: #0292D8;
+}
+.content{
+    display: contents;
+    color: #fff;
+}
+.profile-pic{
+    text-align: center;
+}
+.profile-pic img{
+    width: 173px;
+    border-radius: 88px;
+    margin-top: 70px;
+}
+.name{
+    text-align: center;
+    font-size: 31px;
+    margin-top: 28px;
+    font-family: Inter-ExtraBold;
+}
+.description{
+    text-align: center;
+    width: 551px
+    margin: auto;
+    font-size: 20px;
+    font-family: Inter-Medium;
+}
+.row3 div img{
+    width: 86%;
+    margin-top: 0%;
+    margin-left: 10%;
+}
+.contacts{
+    color: #fff;
+}
+.row3 div h5{
+    margin-top: 24px;
+}
+.row3 div i{
+    margin-top: 12px;
+}
+.row3{margin-top: 53px;}
+.row3 div p{
+    display: contents;
+    margin-top: 10px;
+}
+.row3 div a{
+    text-decoration: none;
+    color: #fff;
+    transition: 0.5s;
+}
