@@ -150,6 +150,9 @@ body{
 .contacts{
     color: #fff;
 }
+.contacts-img{ 
+    margin-bottom: 100px;
+}
 .row3 div h5{
     margin-top: 24px;
 }
