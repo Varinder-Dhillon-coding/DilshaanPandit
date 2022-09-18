@@ -44,7 +44,7 @@ body{
     width: 0;
     height: 3px;
     background: #fe3756;
-    transition: width .5s;
+    transition: width .3s;
 }
 .menu a:hover::after{
     width: 25%;
@@ -54,20 +54,21 @@ body{
 }
 .main_headline{
     position: absolute;
-    margin-top: 19%;
+    margin-top: 14%;
     width: 102%;
 }
 .main_headline p{
     text-align: center;
-    font-size: 127%;
+    font-size: 18px;
     color: white;
     font-family: Inter-Bold;
+    margin-bottom: -13px;
 }
 .main_headline button{
     background-color: transparent;
     color: white;
     border: 2px solid white;
-    padding: 15px;
+    padding: 9px;
     font-family: Inter-bold;
     transition: .5s;
 }
@@ -103,19 +104,21 @@ body{
     background-image: linear-gradient(90deg, #000000 -6%, #3b3b3b 30%, #000000 85%, #000000 120%);
     z-index: 1;
 }
+
 .footer{
     height: 100px;
+    margin-top: 30px;
 }
 .footer ul{
     display: flex;
     justify-content: center;
     list-style: none;
-    margin-top: 98px;
-    padding: 16px;
+    padding: 36px;
     margin-right: -40px;
     margin-left: -40px;
+    background-color: #181919;
 }
-.footer ul li a,.content div a{
+.footer ul li a,.content div a,.yt{
     margin: 13px;
     color: white;
     transition: .3s;
@@ -125,6 +128,7 @@ body{
 }
 .content{
     display: contents;
+    background-color: #181919;
     color: #fff;
 }
 .profile-pic{
@@ -143,19 +147,20 @@ body{
 }
 .description{
     text-align: center;
-    width: 551px
+    width: 551px;
     margin: auto;
     font-size: 20px;
     font-family: Inter-Medium;
 }
 .row3 div img{
-    width: 86%;
-    margin-top: 0%;
+    width: 87%;
+    border-radius: 23px;
     margin-left: 10%;
 }
 .contacts{
     color: #fff;
     padding: 53px;
+    padding-top: 0px;
 }
 .contact-img{
     margin-bottom: 40px;
@@ -166,7 +171,7 @@ body{
 .row3 div i{
     margin-top: 12px;
 }
-.row3{margin-top: 53px;}
+.row3{margin-top: 26px;}
 .row3 div p{
     display: contents;
     margin-top: 10px;
@@ -175,4 +180,31 @@ body{
     text-decoration: none;
     color: #fff;
     transition: 0.5s;
+}
+
+/* this is not permanent */
+
+.card-title1{
+    color: #ffeca7;
+    font-family: Inter-Bold;
+}
+.card-text1{
+    color: #fff;
+    font-family: Inter-Medium;
+}
+.row-temporary{
+    display: flex;
+    justify-content: space-around;
+
+}
+.card1{
+    background-color: #181919;
+    display: inline-flex;
+    margin-bottom: 6vw;
+}
+.columns{
+    text-align: center;
+}
+.card-img{
+    height: 178px;
 }
