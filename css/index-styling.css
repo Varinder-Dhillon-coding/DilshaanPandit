@@ -1,3 +1,5 @@
+/* Some external files of ttf fonts */
+
 @font-face {
     font-family: Inter-Extrabold;
     src: url(../Inter/static/Inter-ExtraBold.ttf);
@@ -10,6 +12,24 @@
     font-family: Inter-Medium;
     src: url(Inter/Inter-Medium.ttf);
 }
+/* header user section css */
+.no-profile-picture{
+    height: 28px;
+    border: 1px white;
+    border-radius: 24px;
+}
+.user-data{
+    display: flex;
+
+}
+
+.username{
+    margin: 0;
+    margin-left: 5px;
+}
+
+/* Body and menu to navigate css */
+
 body{
     background-color: rgb(11, 10, 10);
     color: white;
@@ -19,26 +39,40 @@ body{
     padding: 0;
     margin: 0;
 }
+.imp{
+    margin-top: 70px;
+}
+
 .row1{
+    position: fixed;
+    background-color: #181919;
+    width: 105%;
+    top: 0;
     display: flex;
     height: 100px;
     align-items: center;
     font-family: Inter-ExtraBold;
     padding: 34px;
     font-size: 17px;
+    z-index: 1;
 }
-.logo{
-    width: 40%;
+
+.menu-bar{
+    display: flex;
+    justify-content: space-evenly;
 }
-.menu{
-    width: 20%;
+.logo a{
+    font-size: 17px;
 }
 .menu a,.logo a{
+    display: inline-block;
     color: #fff;
     text-decoration: none;
     transition: 0.5s;
 }
-.menu a::after{
+.menu a::after,.logo a::after{
+    display: inline-block;
+    position: relative;
     content: '';
     display: flex;
     width: 0;
@@ -47,11 +81,68 @@ body{
     transition: width .3s;
 }
 .menu a:hover::after{
-    width: 25%;
+    width: 103%;
 }
 .menu a:hover,.logo a:hover{
     color: #fe3756;
 }
+
+/* This is hamburger navigating menu code 
+it shows for mobile devices and tablets  */
+
+.hamburger-menu{
+    display: none;
+    padding-top: 5px;
+}
+.hamburger-menu ul{
+    list-style: none;
+    margin-top: 15px;
+}
+.bar{
+    height: 2.4px;
+    width: 20px;
+    margin: 4px auto;
+    background-color: white;
+    transition: 0.3s ease-in-out;
+    display: block;
+    border-radius: 3px;
+}
+
+.hamburger-list{
+    list-style: none;
+    cursor: pointer;
+    text-align: center;
+    background-color: #181919;
+    height: 150vh;
+    width: 50vw;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 60px;
+    right: -100%;
+    transition: all 0.5s ease-in-out;
+}
+.hamburger-list li{
+    margin-top: 50px;
+}
+.hamburger-list li a{
+    color: white;
+    text-decoration: none;
+}
+.hamburger-list li a:hover{
+    color: #fe3756;
+}
+.hamburger-menu.active {
+    left: 50; 
+    font-size: 20px;
+}
+.hamburger-list.active{
+    right: 0%;
+}
+
+/* HOME PAGE CSS */
+/* Background and first look background and headlines */
+
 .main_headline{
     position: absolute;
     margin-top: 14%;
@@ -80,6 +171,13 @@ body{
     color: black;
     transition: .7s;
 }
+.background img{
+    width: 100%;
+    height: auto;
+}
+
+/* This is external links and cards for user to get songs */
+
 .row2{
     height: 700px;
     padding: 28px;
@@ -93,97 +191,18 @@ body{
     font-size: 112%;
     font-family: Inter-Bold;
 }
-.background img{
-    width: 100%;
-    height: auto;
-}
-.background_image_gradient{
-    width: 100%;
-    height: 100%;
-    opacity: 0.45;
-    background-image: linear-gradient(90deg, #000000 -6%, #3b3b3b 30%, #000000 85%, #000000 120%);
-    z-index: 1;
-}
 
-.footer{
-    height: 100px;
-    margin-top: 30px;
-}
-.footer ul{
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    padding: 36px;
-    margin-right: -40px;
-    margin-left: -40px;
-    background-color: #181919;
-}
-.footer ul li a,.content div a,.yt{
-    margin: 13px;
-    color: white;
-    transition: .3s;
-}
-.footer ul li a:hover,.content div a:hover,.row3 div a:hover{
-    color: #0292D8;
-}
-.content{
-    display: contents;
-    background-color: #181919;
-    color: #fff;
-}
-.profile-pic{
-    text-align: center;
-}
-.profile-pic img{
-    width: 173px;
-    border-radius: 88px;
-    margin-top: 70px;
-}
-.name{
-    text-align: center;
-    font-size: 31px;
-    margin-top: 28px;
-    font-family: Inter-ExtraBold;
-}
-.description{
-    text-align: center;
-    width: 551px;
-    margin: auto;
-    font-size: 20px;
-    font-family: Inter-Medium;
-}
-.row3 div img{
-    width: 87%;
-    border-radius: 23px;
-    margin-left: 10%;
-}
-.contacts{
-    color: #fff;
-    padding: 53px;
-    padding-top: 0px;
-}
-.contact-img{
-    margin-bottom: 40px;
-}
-.row3 div h5{
-    margin-top: 24px;
-}
-.row3 div i{
-    margin-top: 12px;
-}
-.row3{margin-top: 26px;}
-.row3 div p{
-    display: contents;
-    margin-top: 10px;
-}
-.row3 div a{
-    text-decoration: none;
-    color: #fff;
-    transition: 0.5s;
-}
+/* this is not permanent  Idk realyy its content may change*/
+/* This are cards and yt links to videos */
 
-/* this is not permanent */
-
+.card1{
+    width: 56%;
+    box-shadow: 2px 2px 8.0px hsla(0, 0%, 100%, 0.35);
+    transition:.3s ease-in-out;
+}
+.card1:hover{
+    transform: scale(1.04);
+}
 .card-title1{
     color: #ffeca7;
     font-family: Inter-Bold;
@@ -207,4 +226,274 @@ body{
 }
 .card-img{
     height: 178px;
+}
+.row-yt-center{
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.row-yt{
+    display: flex;
+    margin: auto;
+}
+
+/* FOOTER CSS */
+
+.footer{
+    height: 150px;
+    width: 100%;
+    margin-top: 30px;
+    text-align: center;
+    background-color: #181a1a;
+}
+.footer ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 36px;
+    margin-left: 4%;
+    background-color: #181919;
+}
+.footer ul li a,.footer div,.content div a,.yt{
+    margin-right: 14px;
+    text-decoration: dotted;
+    color: white;
+    transition: .4s ease-in-out;
+}
+.footer ul li a:hover,.content div a:hover,.row3 div a:hover,.footer div:hover{
+    transform:translateY(-7px);
+    color: #0292D8;
+}
+.copyright{
+    font-size: 14px;
+    text-decoration: dashed;
+    color: white;
+    position: absolute;
+    background-color: #181919;
+    margin-top: 5px;
+    transition: .5s ease-in-out;
+}
+.copyright:hover{
+    transform:translateY(-7px);
+    color: #0292D8;
+}
+
+/* ABOUT PAGE CSS */
+/* These are information about us css */
+
+.content{
+    display: contents;
+    background-color: #181919;
+    color: #fff;
+}
+.profile-pic{
+    text-align: center;
+    margin-top: 50px;
+}
+.profile-pic img{
+    width: 173px;
+    border-radius: 88px;
+    margin-top: 70px;
+}
+.name{
+    text-align: center;
+    font-size: 31px;
+    margin-top: 28px;
+    font-family: Inter-ExtraBold;
+}
+.description{
+    text-align: center;
+    width: 551px;
+    margin: auto;
+    font-size: 20px;
+    font-family: Inter-Medium;
+}
+
+/* CONTACT PAGE CSS */
+/* These are links and image css */
+
+.row3 div img{
+    width: 87%;
+    border: 1px white;
+    border-radius: 23px;
+    margin-left: 10%;
+    
+}
+.contacts{
+    color: #fff;
+    padding: 53px;
+    padding-top: 0px;
+}
+.contact-img{
+    margin-bottom: 40px;
+}
+
+.row3 div h5{
+    margin-top: 24px;
+}
+.row3 div i{
+    margin-top: 12px;
+}
+.row3{
+    margin-top: 126px;
+}
+.row3 div p{
+    display: contents;
+    margin-top: 10px;
+}
+.row3 div a{
+    text-decoration: none;
+    color: #fff;
+    transition: 0.5s;
+}
+
+/* Sign Up page css */
+
+.signup-container{
+    width: 400px;
+    margin-top: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 80px;
+    padding: 30px;
+    background-color: white;
+    border-radius: 3%;
+}
+
+.google-btn{
+    background-color: #e9ecef;
+    width: 170px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+    height: 34px;
+    border-radius: 3px;
+    margin-top: 20px;
+    transition: 0.5s ease-in-out;
+}
+.google-btn:hover{
+    scale: 1.1;
+    color: #fe3756;
+}
+.google-btn img{
+    height: 20px;
+}
+.signup-container h2{
+    color: #000000;
+    font-size: 22px;
+    font-family: Inter-Bold;
+}
+.signup-container p{
+    color: #000000;
+    font-family: Inter-Medium;
+    opacity: 0.75;
+
+}
+.google-login{
+    margin-top: 0px;
+    background-color: inherit;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: black;
+    transition: 0.5s ease-in-out;
+}
+.google-login:hover{
+    color: #fe3756;
+}
+.signup-container .signup{
+    background-color:#fe3756;
+    font-family: Inter-Medium;
+    color: white;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 0;
+    padding: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+.signup-container .signup:hover{
+    background-color: #e9ecef;
+    color: #fe3756;
+    scale: 1.1;
+}
+form input[type="password"]{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.signup-container form input[type="text"]{
+    margin-bottom: 10px;
+}
+.signup-container form input::placeholder{
+    color: #000000;
+    font-family: Inter-Medium;
+}
+
+.signup-container form input[type="text"],
+form input[type="password"],form input[type="email"]
+{
+    border: 1px solid RGB(254,55,86,0.5);
+}
+.signup-container form input[type="text"]:focus,
+form input[type="password"]:focus,form input[type="email"]:focus{
+border: 0;
+}
+
+/* Most of css is from signup page */
+/* LOGIN PAGE CSS */
+
+.login-margin{
+    margin-bottom: 150px;
+}
+
+.logout{
+    background-color: #000000;
+    color: red;
+    border: 1px solid red;
+    margin-bottom: 100px;
+    border-radius: 2px;
+    padding: 0px 10px;
+    transition: 0.15s ease-in-out;
+}
+.logout:hover{
+    background-color: red;
+    color: #fff;
+    scale: 1.05;
+}
+
+/* most of css is from about page */
+/* user_data_show css */
+.user_data_show{
+    margin-top: 10%;
+}
+
+
+/* Media query for showing hamburger menu after 768ps of width */
+
+@media (max-width:768px) {
+    .hamburger-menu{
+        display: flex;
+        margin-top: -30px;
+    }
+    .menu-bar{
+        display: none;
+    }
+    .hamburger-menu.active ul :nth-child(2){
+        opacity: 0;
+    }
+    .hamburger-menu.active ul :nth-child(1){
+        transform: translateY(8px) rotate(65deg);
+        width: 25px;
+    }
+    .hamburger-menu.active ul :nth-child(3){
+        transform: translateY(-9px) translateX(-8px) rotate(-17deg);
+    }
+    .logo{
+        margin-top: -10px;
+    }
+    .row1{
+        height: 60px;
+    }
 }
