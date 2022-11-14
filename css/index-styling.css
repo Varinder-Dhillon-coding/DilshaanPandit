@@ -54,7 +54,7 @@ body{
     font-family: Inter-ExtraBold;
     padding: 34px;
     font-size: 17px;
-    z-index: 1;
+    z-index: 3;
 }
 
 .menu-bar{
@@ -70,6 +70,11 @@ body{
     text-decoration: none;
     transition: 0.5s;
 }
+.icons{
+    margin-right: 3px;
+    margin-bottom: 0px;
+    margin-top: 6px;
+}
 
 .menu a::after,.logo a::after{
     display: inline-block;
@@ -79,13 +84,12 @@ body{
     width: 0;
     height: 3px;
     background: #fe3756;
-    transition: width .3s;
+    transition: width .4s;
 }
 .menu a:hover::after{
     width: 103%;
 }
 .menu a:hover,.logo a:hover{
-    scale: 1.03;
     color: #fe3756;
 }
 
@@ -124,8 +128,9 @@ it shows for mobile devices and tablets  */
     right: -100%;
     transition: all 0.5s ease-in-out;
 }
+
 .hamburger-list li{
-    margin-top: 50px;
+    margin-top: 70px;
 }
 .hamburger-list li a{
     color: white;
@@ -148,7 +153,7 @@ it shows for mobile devices and tablets  */
 .main_headline{
     position: absolute;
     margin-top: 14%;
-    width: 102%;
+    width: 100%;
 }
 .main_headline p{
     text-align: center;
@@ -166,7 +171,7 @@ it shows for mobile devices and tablets  */
     transition: .5s;
 }
 .main_headline button i{
-    color: #0292D8;
+    color: #fe3756;
 }
 .main_headline button:hover{
     background-color: #fff;
@@ -227,7 +232,7 @@ it shows for mobile devices and tablets  */
     text-align: center;
 }
 .card-img{
-    height: 178px;
+    height: 162px;
 }
 .row-yt-center{
     display: flex;
@@ -299,7 +304,7 @@ it shows for mobile devices and tablets  */
 }
 .name{
     text-align: center;
-    font-size: 31px;
+    font-size: 22px;
     margin-top: 28px;
     font-family: Inter-ExtraBold;
 }
@@ -307,7 +312,7 @@ it shows for mobile devices and tablets  */
     text-align: center;
     width: 551px;
     margin: auto;
-    font-size: 20px;
+    font-size: 18px;
     font-family: Inter-Medium;
 }
 
@@ -481,7 +486,7 @@ border: 0;
     margin-bottom: 35px;
 }
 .card-flp{
-    width: 300px;
+    width: 254px;
 }
 .free-flp p{
     background-color: snow;
@@ -523,5 +528,21 @@ border: 0;
     }
     .row1{
         height: 60px;
+    }
+    .main_headline{
+        z-index: 1;
+        scale: 1.02;
+    }
+    .background{
+        height: 516px;
+        margin-top: 150px;    
+    }
+    .headlines{
+        z-index: 2;
+    }
+    .background img{
+        width: 50.6%;
+        scale: 3;
+        height: 44%;
     }
 }
